@@ -1,0 +1,42 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/phase_unwrapping/test/test_main.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_phase_unwrapping",
+				"AccuracyTest"
+			]
+		},
+		{
+			"file" : "/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/phase_unwrapping/test/test_unwrapping.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_phase_unwrapping",
+				"AccuracyTest"
+			]
+		},
+		{
+			"file" : "/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/phase_unwrapping/test/test_precomp.hpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_phase_unwrapping",
+				"AccuracyTest"
+			]
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Extra",
+			"opencv_phase_unwrapping",
+			"AccuracyTest"
+		],
+		"name" : "opencv_test_phase_unwrapping"
+	}
+}

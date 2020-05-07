@@ -1,0 +1,24 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/rgbd/samples/odometry_evaluation.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_rgbd",
+				"Sample"
+			]
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Extra",
+			"opencv_rgbd",
+			"Sample"
+		],
+		"name" : "example_rgbd_odometry_evaluation"
+	}
+}

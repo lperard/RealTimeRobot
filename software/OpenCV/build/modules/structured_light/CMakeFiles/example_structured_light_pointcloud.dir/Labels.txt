@@ -1,0 +1,9 @@
+# Target labels
+ Extra
+ opencv_structured_light
+ Sample
+# Source files and their labels
+/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/structured_light/samples/pointcloud.cpp
+ Extra
+ opencv_structured_light
+ Sample

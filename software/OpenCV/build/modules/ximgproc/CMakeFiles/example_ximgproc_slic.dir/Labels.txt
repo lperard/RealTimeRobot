@@ -1,0 +1,9 @@
+# Target labels
+ Extra
+ opencv_ximgproc
+ Sample
+# Source files and their labels
+/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/ximgproc/samples/slic.cpp
+ Extra
+ opencv_ximgproc
+ Sample

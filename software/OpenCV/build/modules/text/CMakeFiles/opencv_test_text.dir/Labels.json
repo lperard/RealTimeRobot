@@ -1,0 +1,42 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/text/test/test_detection.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_text",
+				"AccuracyTest"
+			]
+		},
+		{
+			"file" : "/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/text/test/test_main.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_text",
+				"AccuracyTest"
+			]
+		},
+		{
+			"file" : "/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/text/test/test_precomp.hpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_text",
+				"AccuracyTest"
+			]
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Extra",
+			"opencv_text",
+			"AccuracyTest"
+		],
+		"name" : "opencv_test_text"
+	}
+}

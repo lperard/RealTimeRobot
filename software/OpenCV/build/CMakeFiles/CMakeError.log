@@ -1,0 +1,599 @@
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command line option ‘-Wmissing-prototypes’ is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations  -Wmissing-prototypes'
+===== BUILD LOG =====
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_61703/fast"
+/usr/bin/make -f CMakeFiles/cmTC_61703.dir/build.make CMakeFiles/cmTC_61703.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_61703.dir/src.cxx.o
+/usr/bin/c++    -O3 -DNDEBUG -fPIE   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -o CMakeFiles/cmTC_61703.dir/src.cxx.o -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command line option ‘-Wmissing-prototypes’ is valid for C/ObjC but not for C++
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ 
+Linking CXX executable cmTC_61703
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_61703.dir/link.txt --verbose=1
+/usr/bin/c++    -O3 -DNDEBUG    -rdynamic CMakeFiles/cmTC_61703.dir/src.cxx.o  -o cmTC_61703 
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations  -Wstrict-prototypes'
+===== BUILD LOG =====
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cc54c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cc54c.dir/build.make CMakeFiles/cmTC_cc54c.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_cc54c.dir/src.cxx.o
+/usr/bin/c++    -O3 -DNDEBUG -fPIE   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wstrict-prototypes -o CMakeFiles/cmTC_cc54c.dir/src.cxx.o -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command line option ‘-Wstrict-prototypes’ is valid for C/ObjC but not for C++
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ 
+Linking CXX executable cmTC_cc54c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_cc54c.dir/link.txt --verbose=1
+/usr/bin/c++    -O3 -DNDEBUG    -rdynamic CMakeFiles/cmTC_cc54c.dir/src.cxx.o  -o cmTC_cc54c 
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command line option ‘-Wsign-promo’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow  -Wsign-promo'
+===== BUILD LOG =====
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_12334/fast"
+/usr/bin/make -f CMakeFiles/cmTC_12334.dir/build.make CMakeFiles/cmTC_12334.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_12334.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -o CMakeFiles/cmTC_12334.dir/src.c.o   -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+cc1: warning: command line option ‘-Wsign-promo’ is valid for C++/ObjC++ but not for C
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ 
+Linking C executable cmTC_12334
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_12334.dir/link.txt --verbose=1
+/usr/bin/cc   -O3 -DNDEBUG    -rdynamic CMakeFiles/cmTC_12334.dir/src.c.o  -o cmTC_12334 
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command line option ‘-Wno-delete-non-virtual-dtor’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing  -Wno-delete-non-virtual-dtor'
+===== BUILD LOG =====
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_01727/fast"
+/usr/bin/make -f CMakeFiles/cmTC_01727.dir/build.make CMakeFiles/cmTC_01727.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_01727.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -o CMakeFiles/cmTC_01727.dir/src.c.o   -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+cc1: warning: command line option ‘-Wno-delete-non-virtual-dtor’ is valid for C++/ObjC++ but not for C
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ 
+Linking C executable cmTC_01727
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_01727.dir/link.txt --verbose=1
+/usr/bin/cc   -O3 -DNDEBUG    -rdynamic CMakeFiles/cmTC_01727.dir/src.c.o  -o cmTC_01727 
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option ‘-Wno-unnamed-type-template-args’'
+Compilation failed:
+    source file: '/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor  -Wno-unnamed-type-template-args'
+===== BUILD LOG =====
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_06208/fast"
+/usr/bin/make -f CMakeFiles/cmTC_06208.dir/build.make CMakeFiles/cmTC_06208.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_06208.dir/src.cxx.o
+/usr/bin/c++    -O3 -DNDEBUG -fPIE   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-unnamed-type-template-args -o CMakeFiles/cmTC_06208.dir/src.cxx.o -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ 
+cc1plus: warning: unrecognized command line option ‘-Wno-unnamed-type-template-args’
+Linking CXX executable cmTC_06208
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_06208.dir/link.txt --verbose=1
+/usr/bin/c++    -O3 -DNDEBUG    -rdynamic CMakeFiles/cmTC_06208.dir/src.cxx.o  -o cmTC_06208 
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: warning: unrecognized command line option ‘-Wno-unnamed-type-template-args’'
+Compilation failed:
+    source file: '/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing  -Wno-unnamed-type-template-args'
+===== BUILD LOG =====
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_74eb4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_74eb4.dir/build.make CMakeFiles/cmTC_74eb4.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_74eb4.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-unnamed-type-template-args -o CMakeFiles/cmTC_74eb4.dir/src.c.o   -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ 
+cc1: warning: unrecognized command line option ‘-Wno-unnamed-type-template-args’
+Linking C executable cmTC_74eb4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_74eb4.dir/link.txt --verbose=1
+/usr/bin/cc   -O3 -DNDEBUG    -rdynamic CMakeFiles/cmTC_74eb4.dir/src.c.o  -o cmTC_74eb4 
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+
+===== END =====
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C'
+    Output line: 'cc1: warning: command line option ‘-fvisibility-inlines-hidden’ is valid for C++/ObjC++ but not for C'
+Compilation failed:
+    source file: '/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -fvisibility-inlines-hidden'
+===== BUILD LOG =====
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_eace4/fast"
+/usr/bin/make -f CMakeFiles/cmTC_eace4.dir/build.make CMakeFiles/cmTC_eace4.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_eace4.dir/src.c.o
+/usr/bin/cc   -O3 -DNDEBUG -fPIE   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -o CMakeFiles/cmTC_eace4.dir/src.c.o   -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+cc1: warning: command line option ‘-fvisibility-inlines-hidden’ is valid for C++/ObjC++ but not for C
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ 
+Linking C executable cmTC_eace4
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_eace4.dir/link.txt --verbose=1
+/usr/bin/cc   -O3 -DNDEBUG    -rdynamic CMakeFiles/cmTC_eace4.dir/src.c.o  -o cmTC_eace4 
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1: warning: unrecognized command line option ‘-Wno-absolute-value’'
+Compilation failed:
+    source file: '/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.c'
+    check option: ' -Wno-absolute-value'
+===== BUILD LOG =====
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_83d68/fast"
+/usr/bin/make -f CMakeFiles/cmTC_83d68.dir/build.make CMakeFiles/cmTC_83d68.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_83d68.dir/src.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith  -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -Wno-implicit-function-declaration -Wno-uninitialized -Wno-missing-prototypes -Wno-unused-but-set-parameter -Wno-missing-declarations -Wno-unused -Wno-shadow -Wno-sign-compare -Wno-strict-overflow -Wno-pointer-compare  -O3 -DNDEBUG -fPIE   -Wno-absolute-value -o CMakeFiles/cmTC_83d68.dir/src.c.o   -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.c:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ 
+cc1: warning: unrecognized command line option ‘-Wno-absolute-value’
+Linking C executable cmTC_83d68
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_83d68.dir/link.txt --verbose=1
+/usr/bin/cc    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith  -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -Wno-implicit-function-declaration -Wno-uninitialized -Wno-missing-prototypes -Wno-unused-but-set-parameter -Wno-missing-declarations -Wno-unused -Wno-shadow -Wno-sign-compare -Wno-strict-overflow -Wno-pointer-compare  -O3 -DNDEBUG    -Wl,--gc-sections  -rdynamic CMakeFiles/cmTC_83d68.dir/src.c.o  -o cmTC_83d68 
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+
+===== END =====
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_f4833/fast"
+/usr/bin/make -f CMakeFiles/cmTC_f4833.dir/build.make CMakeFiles/cmTC_f4833.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_f4833.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_f4833.dir/CheckIncludeFile.c.o   -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: linux/videodev.h: Aucun fichier ou dossier de ce type
+ #include <linux/videodev.h>
+          ^~~~~~~~~~~~~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_f4833.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_f4833.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_f4833.dir/CheckIncludeFile.c.o] Error 1
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_f4833/fast' failed
+make: *** [cmTC_f4833/fast] Error 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_8ed68/fast"
+/usr/bin/make -f CMakeFiles/cmTC_8ed68.dir/build.make CMakeFiles/cmTC_8ed68.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_8ed68.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_8ed68.dir/CheckIncludeFile.c.o   -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:10: fatal error: sys/videoio.h: Aucun fichier ou dossier de ce type
+ #include <sys/videoio.h>
+          ^~~~~~~~~~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_8ed68.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_8ed68.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_8ed68.dir/CheckIncludeFile.c.o] Error 1
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_8ed68/fast' failed
+make: *** [cmTC_8ed68/fast] Error 2
+
+
+Build output check failed:
+    Regex: 'command line option .* is valid for .* but not for C\+\+'
+    Output line: 'cc1plus: warning: command line option ‘-Wno-missing-prototypes’ is valid for C/ObjC but not for C++'
+Compilation failed:
+    source file: '/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-missing-prototypes'
+===== BUILD LOG =====
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_471f1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_471f1.dir/build.make CMakeFiles/cmTC_471f1.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_471f1.dir/src.cxx.o
+/usr/bin/c++    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated  -O3 -DNDEBUG -fPIE   -Wno-missing-prototypes -o CMakeFiles/cmTC_471f1.dir/src.cxx.o -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx
+cc1plus: warning: command line option ‘-Wno-missing-prototypes’ is valid for C/ObjC but not for C++
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ 
+Linking CXX executable cmTC_471f1
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_471f1.dir/link.txt --verbose=1
+/usr/bin/c++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated  -O3 -DNDEBUG    -Wl,--gc-sections  -rdynamic CMakeFiles/cmTC_471f1.dir/src.cxx.o  -o cmTC_471f1 
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option ‘-Wno-tautological-undefined-compare’'
+Compilation failed:
+    source file: '/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-tautological-undefined-compare'
+===== BUILD LOG =====
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_9864d/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9864d.dir/build.make CMakeFiles/cmTC_9864d.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_9864d.dir/src.cxx.o
+/usr/bin/c++    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Winit-self -Wpointer-arith   -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef  -O3 -DNDEBUG -fPIE   -Wno-tautological-undefined-compare -o CMakeFiles/cmTC_9864d.dir/src.cxx.o -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ 
+cc1plus: warning: unrecognized command line option ‘-Wno-tautological-undefined-compare’
+Linking CXX executable cmTC_9864d
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9864d.dir/link.txt --verbose=1
+/usr/bin/c++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Winit-self -Wpointer-arith   -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef  -O3 -DNDEBUG    -Wl,--gc-sections  -rdynamic CMakeFiles/cmTC_9864d.dir/src.cxx.o  -o cmTC_9864d 
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option ‘-Wno-shorten-64-to-32’'
+Compilation failed:
+    source file: '/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-shorten-64-to-32'
+===== BUILD LOG =====
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_aeacd/fast"
+/usr/bin/make -f CMakeFiles/cmTC_aeacd.dir/build.make CMakeFiles/cmTC_aeacd.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_aeacd.dir/src.cxx.o
+/usr/bin/c++    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Winit-self -Wpointer-arith   -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable  -O3 -DNDEBUG -fPIE   -Wno-shorten-64-to-32 -o CMakeFiles/cmTC_aeacd.dir/src.cxx.o -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ 
+cc1plus: warning: unrecognized command line option ‘-Wno-shorten-64-to-32’
+Linking CXX executable cmTC_aeacd
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aeacd.dir/link.txt --verbose=1
+/usr/bin/c++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Winit-self -Wpointer-arith   -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable  -O3 -DNDEBUG    -Wl,--gc-sections  -rdynamic CMakeFiles/cmTC_aeacd.dir/src.cxx.o  -o cmTC_aeacd 
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option ‘-Wno-enum-compare-switch’'
+Compilation failed:
+    source file: '/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-enum-compare-switch'
+===== BUILD LOG =====
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_2e665/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2e665.dir/build.make CMakeFiles/cmTC_2e665.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_2e665.dir/src.cxx.o
+/usr/bin/c++    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Winit-self -Wpointer-arith   -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-invalid-offsetof  -O3 -DNDEBUG -fPIE   -Wno-enum-compare-switch -o CMakeFiles/cmTC_2e665.dir/src.cxx.o -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ 
+cc1plus: warning: unrecognized command line option ‘-Wno-enum-compare-switch’
+Linking CXX executable cmTC_2e665
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2e665.dir/link.txt --verbose=1
+/usr/bin/c++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Winit-self -Wpointer-arith   -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-invalid-offsetof  -O3 -DNDEBUG    -Wl,--gc-sections  -rdynamic CMakeFiles/cmTC_2e665.dir/src.cxx.o  -o cmTC_2e665 
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option ‘-Wno-inconsistent-missing-override’'
+Compilation failed:
+    source file: '/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-inconsistent-missing-override'
+===== BUILD LOG =====
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4af10/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4af10.dir/build.make CMakeFiles/cmTC_4af10.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_4af10.dir/src.cxx.o
+/usr/bin/c++    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Winit-self -Wpointer-arith   -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-invalid-offsetof -Wno-suggest-override  -O3 -DNDEBUG -fPIE   -Wno-inconsistent-missing-override -o CMakeFiles/cmTC_4af10.dir/src.cxx.o -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ 
+cc1plus: warning: unrecognized command line option ‘-Wno-inconsistent-missing-override’
+Linking CXX executable cmTC_4af10
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4af10.dir/link.txt --verbose=1
+/usr/bin/c++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security   -Winit-self -Wpointer-arith   -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-deprecated -Wno-missing-declarations -Wno-shadow -Wno-unused-parameter -Wno-unused-local-typedefs -Wno-sign-compare -Wno-sign-promo -Wno-undef -Wno-ignored-qualifiers -Wno-extra -Wno-unused-function -Wno-unused-const-variable -Wno-invalid-offsetof -Wno-suggest-override  -O3 -DNDEBUG    -Wl,--gc-sections  -rdynamic CMakeFiles/cmTC_4af10.dir/src.cxx.o  -o cmTC_4af10 
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+
+===== END =====
+
+Build output check failed:
+    Regex: 'unrecognized .*option'
+    Output line: 'cc1plus: warning: unrecognized command line option ‘-Wno-unused-private-field’'
+Compilation failed:
+    source file: '/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx'
+    check option: ' -Wno-unused-private-field'
+===== BUILD LOG =====
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_046b5/fast"
+/usr/bin/make -f CMakeFiles/cmTC_046b5.dir/build.make CMakeFiles/cmTC_046b5.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building CXX object CMakeFiles/cmTC_046b5.dir/src.cxx.o
+/usr/bin/c++    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-unused-function -Wno-deprecated-declarations -Wno-overloaded-virtual  -O3 -DNDEBUG -fPIE   -Wno-unused-private-field -o CMakeFiles/cmTC_046b5.dir/src.cxx.o -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/src.cxx:1:0: warning: ignoring #pragma   [-Wunknown-pragmas]
+ #pragma
+ 
+cc1plus: warning: unrecognized command line option ‘-Wno-unused-private-field’
+Linking CXX executable cmTC_046b5
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_046b5.dir/link.txt --verbose=1
+/usr/bin/c++     -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wundef -Winit-self -Wpointer-arith -Wshadow -Wsign-promo -Wuninitialized -Winit-self -Wno-narrowing -Wno-delete-non-virtual-dtor -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden -fvisibility-inlines-hidden -Wno-unused-function -Wno-deprecated-declarations -Wno-overloaded-virtual  -O3 -DNDEBUG    -Wl,--gc-sections  -rdynamic CMakeFiles/cmTC_046b5.dir/src.cxx.o  -o cmTC_046b5 
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+
+===== END =====
+
+Determining if the CL_VERSION_2_2 exist failed with the following output:
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4737a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4737a.dir/build.make CMakeFiles/cmTC_4737a.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_4737a.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_4737a.dir/CheckSymbolExists.c.o   -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: Aucun fichier ou dossier de ce type
+ #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_4737a.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_4737a.dir/CheckSymbolExists.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_4737a.dir/CheckSymbolExists.c.o] Error 1
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_4737a/fast' failed
+make: *** [cmTC_4737a/fast] Error 2
+
+File /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_2_2
+  return ((int*)(&CL_VERSION_2_2))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the CL_VERSION_2_1 exist failed with the following output:
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_b96f6/fast"
+/usr/bin/make -f CMakeFiles/cmTC_b96f6.dir/build.make CMakeFiles/cmTC_b96f6.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_b96f6.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_b96f6.dir/CheckSymbolExists.c.o   -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: Aucun fichier ou dossier de ce type
+ #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_b96f6.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_b96f6.dir/CheckSymbolExists.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_b96f6.dir/CheckSymbolExists.c.o] Error 1
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_b96f6/fast' failed
+make: *** [cmTC_b96f6/fast] Error 2
+
+File /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_2_1
+  return ((int*)(&CL_VERSION_2_1))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the CL_VERSION_2_0 exist failed with the following output:
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_cae41/fast"
+/usr/bin/make -f CMakeFiles/cmTC_cae41.dir/build.make CMakeFiles/cmTC_cae41.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_cae41.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_cae41.dir/CheckSymbolExists.c.o   -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: Aucun fichier ou dossier de ce type
+ #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_cae41.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_cae41.dir/CheckSymbolExists.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_cae41.dir/CheckSymbolExists.c.o] Error 1
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_cae41/fast' failed
+make: *** [cmTC_cae41/fast] Error 2
+
+File /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_2_0
+  return ((int*)(&CL_VERSION_2_0))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the CL_VERSION_1_2 exist failed with the following output:
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_fa99a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_fa99a.dir/build.make CMakeFiles/cmTC_fa99a.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_fa99a.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_fa99a.dir/CheckSymbolExists.c.o   -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: Aucun fichier ou dossier de ce type
+ #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_fa99a.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_fa99a.dir/CheckSymbolExists.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_fa99a.dir/CheckSymbolExists.c.o] Error 1
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_fa99a/fast' failed
+make: *** [cmTC_fa99a/fast] Error 2
+
+File /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_1_2
+  return ((int*)(&CL_VERSION_1_2))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the CL_VERSION_1_1 exist failed with the following output:
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_4ec3c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_4ec3c.dir/build.make CMakeFiles/cmTC_4ec3c.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_4ec3c.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_4ec3c.dir/CheckSymbolExists.c.o   -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: Aucun fichier ou dossier de ce type
+ #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_4ec3c.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_4ec3c.dir/CheckSymbolExists.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_4ec3c.dir/CheckSymbolExists.c.o] Error 1
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_4ec3c/fast' failed
+make: *** [cmTC_4ec3c/fast] Error 2
+
+File /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_1_1
+  return ((int*)(&CL_VERSION_1_1))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the CL_VERSION_1_0 exist failed with the following output:
+Change Dir: /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_3330a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3330a.dir/build.make CMakeFiles/cmTC_3330a.dir/build
+make[1] : on entre dans le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Building C object CMakeFiles/cmTC_3330a.dir/CheckSymbolExists.c.o
+/usr/bin/cc   -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wuninitialized -Winit-self -Wno-narrowing -Wno-comment -Wimplicit-fallthrough=3 -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -ffunction-sections -fdata-sections  -msse -msse2 -msse3 -fvisibility=hidden  -O3 -DNDEBUG -fPIE   -o CMakeFiles/cmTC_3330a.dir/CheckSymbolExists.c.o   -c /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+cc1: warning: ‘-Werror=’ argument ‘-Werror=non-virtual-dtor’ is not valid for C
+/home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:2:10: fatal error: OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h: Aucun fichier ou dossier de ce type
+ #include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+          ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+compilation terminated.
+CMakeFiles/cmTC_3330a.dir/build.make:65: recipe for target 'CMakeFiles/cmTC_3330a.dir/CheckSymbolExists.c.o' failed
+make[1]: *** [CMakeFiles/cmTC_3330a.dir/CheckSymbolExists.c.o] Error 1
+make[1] : on quitte le répertoire « /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp »
+Makefile:126: recipe for target 'cmTC_3330a/fast' failed
+make: *** [cmTC_3330a/fast] Error 2
+
+File /home/lucas/Bureau/dumber/software/OpenCV/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <OpenCL_INCLUDE_DIR-NOTFOUND/CL/cl.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef CL_VERSION_1_0
+  return ((int*)(&CL_VERSION_1_0))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+

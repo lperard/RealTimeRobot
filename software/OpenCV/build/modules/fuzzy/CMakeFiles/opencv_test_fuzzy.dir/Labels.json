@@ -1,0 +1,60 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/fuzzy/test/test_f0.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_fuzzy",
+				"AccuracyTest"
+			]
+		},
+		{
+			"file" : "/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/fuzzy/test/test_f1.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_fuzzy",
+				"AccuracyTest"
+			]
+		},
+		{
+			"file" : "/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/fuzzy/test/test_image.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_fuzzy",
+				"AccuracyTest"
+			]
+		},
+		{
+			"file" : "/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/fuzzy/test/test_main.cpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_fuzzy",
+				"AccuracyTest"
+			]
+		},
+		{
+			"file" : "/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/fuzzy/test/test_precomp.hpp",
+			"labels" : 
+			[
+				"Extra",
+				"opencv_fuzzy",
+				"AccuracyTest"
+			]
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"Extra",
+			"opencv_fuzzy",
+			"AccuracyTest"
+		],
+		"name" : "opencv_test_fuzzy"
+	}
+}

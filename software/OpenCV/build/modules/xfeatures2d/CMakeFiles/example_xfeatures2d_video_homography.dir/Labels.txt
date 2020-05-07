@@ -1,0 +1,9 @@
+# Target labels
+ Extra
+ opencv_xfeatures2d
+ Sample
+# Source files and their labels
+/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/xfeatures2d/samples/video_homography.cpp
+ Extra
+ opencv_xfeatures2d
+ Sample

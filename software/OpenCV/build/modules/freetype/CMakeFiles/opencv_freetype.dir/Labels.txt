@@ -1,0 +1,19 @@
+# Target labels
+ Extra
+ opencv_freetype
+ Module
+# Source files and their labels
+/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/freetype/include/opencv2/freetype.hpp
+ Extra
+ opencv_freetype
+ Module
+/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/freetype/src/freetype.cpp
+ Extra
+ opencv_freetype
+ Module
+/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/freetype/src/precomp.hpp
+ Extra
+ opencv_freetype
+ Module
+/home/lucas/Bureau/dumber/software/OpenCV/build/cvconfig.h
+/home/lucas/Bureau/dumber/software/OpenCV/build/opencv2/opencv_modules.hpp

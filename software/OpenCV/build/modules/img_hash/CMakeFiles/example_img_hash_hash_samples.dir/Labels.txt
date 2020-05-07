@@ -1,0 +1,9 @@
+# Target labels
+ Extra
+ opencv_img_hash
+ Sample
+# Source files and their labels
+/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/img_hash/samples/hash_samples.cpp
+ Extra
+ opencv_img_hash
+ Sample

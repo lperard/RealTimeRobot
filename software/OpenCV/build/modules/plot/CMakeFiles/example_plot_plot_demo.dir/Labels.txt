@@ -1,0 +1,9 @@
+# Target labels
+ Extra
+ opencv_plot
+ Sample
+# Source files and their labels
+/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/plot/samples/plot_demo.cpp
+ Extra
+ opencv_plot
+ Sample

@@ -1,0 +1,9 @@
+# Target labels
+ Extra
+ opencv_dnn_objdetect
+ Sample
+# Source files and their labels
+/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/dnn_objdetect/samples/image_classification.cpp
+ Extra
+ opencv_dnn_objdetect
+ Sample

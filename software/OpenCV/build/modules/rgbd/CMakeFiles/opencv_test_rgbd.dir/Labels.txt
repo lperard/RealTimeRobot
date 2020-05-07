@@ -1,0 +1,29 @@
+# Target labels
+ Extra
+ opencv_rgbd
+ AccuracyTest
+# Source files and their labels
+/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/rgbd/test/test_main.cpp
+ Extra
+ opencv_rgbd
+ AccuracyTest
+/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/rgbd/test/test_normal.cpp
+ Extra
+ opencv_rgbd
+ AccuracyTest
+/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/rgbd/test/test_odometry.cpp
+ Extra
+ opencv_rgbd
+ AccuracyTest
+/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/rgbd/test/test_registration.cpp
+ Extra
+ opencv_rgbd
+ AccuracyTest
+/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/rgbd/test/test_utils.cpp
+ Extra
+ opencv_rgbd
+ AccuracyTest
+/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/rgbd/test/test_precomp.hpp
+ Extra
+ opencv_rgbd
+ AccuracyTest

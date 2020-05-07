@@ -1,0 +1,9 @@
+# Target labels
+ Extra
+ opencv_face
+ Sample
+# Source files and their labels
+/home/lucas/Bureau/dumber/software/opencv_contrib-3.4.2/modules/face/samples/sampleDetectLandmarks.cpp
+ Extra
+ opencv_face
+ Sample
