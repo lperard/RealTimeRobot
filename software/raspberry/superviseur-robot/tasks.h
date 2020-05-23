@@ -67,6 +67,7 @@ private:
     int robotStarted = 0;
     int move = MESSAGE_ROBOT_STOP;
     int WD_ID = 0;
+    int error_ComRobot = 0;
     
     /**********************************************************************/
     /* Tasks                                                              */
@@ -89,6 +90,7 @@ private:
     RT_MUTEX mutex_robot;
     RT_MUTEX mutex_robotStarted;
     RT_MUTEX mutex_move;
+    RT_MUTEX mutex_errorCom;
 
     /**********************************************************************/
     /* Semaphores                                                         */

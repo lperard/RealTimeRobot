@@ -289,7 +289,7 @@ void Tasks::SendToMonTask(void* arg) {
  */
 void Tasks::ReceiveFromMonTask(void *arg) {
     Message *msgRcv;
-    
+    int err;
     cout << "Start " << __PRETTY_FUNCTION__ << endl << flush;
     // Synchronization barrier (waiting that all tasks are starting)
     rt_sem_p(&sem_barrier, TM_INFINITE);
@@ -303,7 +303,6 @@ void Tasks::ReceiveFromMonTask(void *arg) {
     while (1) {
         msgRcv = monitor.Read();
         cout << "Rcv <= " << msgRcv->ToString() << endl << flush;
-        
         if (msgRcv->CompareID(MESSAGE_MONITOR_LOST)) /*&& (cpt == 0))*/ {
             cout << "Monitor lost" << endl << flush;
             //cpt++;
@@ -315,8 +314,13 @@ void Tasks::ReceiveFromMonTask(void *arg) {
         } else if (msgRcv->CompareID(MESSAGE_ROBOT_START_WITHOUT_WD)|| (msgRcv->CompareID(MESSAGE_ROBOT_START_WITH_WD))) {
             WD_ID = msgRcv->GetID();
             rt_sem_v(&sem_startRobot);
-            //cpt = 0;
-                      
+            
+            rt_mutex_acquire(&mutex_errorCom, TM_INFINITE);
+            err = error_ComRobot;
+            rt_mutex_release(&mutex_errorCom);
+            if(err == 1){
+                rt_sem_v(&sem_openComRobot);
+            }
         }else if (msgRcv->CompareID(MESSAGE_ROBOT_GO_FORWARD) ||
                 msgRcv->CompareID(MESSAGE_ROBOT_GO_BACKWARD) ||
                 msgRcv->CompareID(MESSAGE_ROBOT_GO_LEFT) ||
@@ -399,7 +403,6 @@ void Tasks::StartRobotTask(void *arg) {
             }
             
         }
-        rt_sem_v(&sem_compteur);
         cout << msgSend->GetID();
         cout << ")" << endl;
         
@@ -426,7 +429,7 @@ void Tasks::MoveTask(void *arg) {
     rt_task_set_periodic(NULL, TM_NOW, 100000000);
     while (1) {
         rt_task_wait_period(NULL);
-        cout << "Periodic movement update";
+        //cout << "Periodic movement update";
         rt_mutex_acquire(&mutex_robotStarted, TM_INFINITE);
         rs = robotStarted;
         rt_mutex_release(&mutex_robotStarted);
@@ -441,7 +444,7 @@ void Tasks::MoveTask(void *arg) {
             robot.Write(new Message((MessageID)cpMove));
             rt_mutex_release(&mutex_robot);
         }
-        cout << endl << flush;
+        //cout << endl << flush;
     }
 }
 
@@ -527,10 +530,10 @@ void Tasks::Compteur(void *arg) {
         rs = robotStarted;
         rt_mutex_release(&mutex_robotStarted);
         //Mettre un ping        
-        cout << "PING SENT" <<endl << flush;
+        
         if(rs == 1){
             if (compteur >= 1) {
-                cout << "+++++++++++++++++COMPTEUR A 3 ++++++++++++++" << endl << flush;
+                cout << "+++++++++++++++++COMMUNICATION WITH ROBOT LOST++++++++++++++" << endl << flush;
                 rt_sem_v(&sem_closeComRobot);
                 msgSend = new Message(MESSAGE_ANSWER_COM_ERROR);
                 WriteInQueue(&q_messageToMon, msgSend);
@@ -539,7 +542,7 @@ void Tasks::Compteur(void *arg) {
                 rt_mutex_acquire(&mutex_robot, TM_INFINITE);
                 msgSend = robot.Write(robot.Ping());
                 rt_mutex_release(&mutex_robot);
-                
+                cout << "PING SENT" <<endl << flush;
                 if (msgSend->GetID() != MESSAGE_ANSWER_COM_ERROR) {
                     compteur = 0;
                     cout << "ACK RECEIVED" <<endl << flush;
@@ -548,9 +551,10 @@ void Tasks::Compteur(void *arg) {
                     compteur++;
                     cout << "ERROR COM ROBOT : " << compteur <<endl << flush;
                 }
+                cout << "VALEUR DU COMPTEUR" << compteur << endl << flush;
             }   
         }
-        cout << "VALEUR DU COMPTEUR" << compteur << endl << flush;
+        
     }
 }
 
@@ -602,10 +606,13 @@ void Tasks::closeRestartComRobot (void * arg) {
     
         if(err >= 0){
             WriteInQueue(&q_messageToMon, new Message(MESSAGE_ANSWER_ACK));
+            rt_mutex_acquire(&mutex_errorCom, TM_INFINITE);
+            error_ComRobot = 1;
+            rt_mutex_release(&mutex_errorCom);
         }
         else{
             cout << "+++++++++++++++PROBLEM IN CLOSING COM ROBOT ++++++++++++++";
-            WriteInQueue(&q_messageToMon, new Message(MESSAGE_ANSWER_ACK));
+            WriteInQueue(&q_messageToMon, new Message(MESSAGE_ANSWER_NACK));
         }
     }
     
