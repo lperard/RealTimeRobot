@@ -66,6 +66,7 @@ private:
     ComRobot robot;
     int robotStarted = 0;
     int move = MESSAGE_ROBOT_STOP;
+    int WD_ID = 0;
     
     /**********************************************************************/
     /* Tasks                                                              */
@@ -97,6 +98,7 @@ private:
     RT_SEM sem_startRobot;
     RT_SEM sem_startRobotWatchdog;
     RT_SEM sem_compteur;
+    RT_SEM sem_batterie;
 
     /**********************************************************************/
     /* Message queues                                                     */
@@ -151,7 +153,7 @@ private:
     
     void Compteur(void *arg);
     
-    void message_batterie(void *arg);
+    void Batterie(void *arg);
     /**
      * Read a message from a given queue, block if empty
      * @param queue Queue identifier
