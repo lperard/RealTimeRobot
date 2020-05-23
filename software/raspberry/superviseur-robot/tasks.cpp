@@ -114,6 +114,15 @@ void Tasks::Init() {
         cerr << "Error semaphore create: " << strerror(-err) << endl << flush;
         exit(EXIT_FAILURE);
     }
+    if (err = rt_sem_create(&sem_restartServ, NULL, 0, S_FIFO)) {
+        cerr << "Error semaphore create: " << strerror(-err) << endl << flush;
+        exit(EXIT_FAILURE);
+    }
+    if (err = rt_sem_create(&sem_startServ, NULL, 0, S_FIFO)) {
+        cerr << "Error semaphore create: " << strerror(-err) << endl << flush;
+        exit(EXIT_FAILURE);
+    }
+
     cout << "Semaphores created successfully" << endl << flush;
 
     /**************************************************************************************/
@@ -156,6 +165,10 @@ void Tasks::Init() {
         exit(EXIT_FAILURE);
     }
     if (err = rt_task_create(&th_closerestartRobot, "th_closerestartRobot", 0, PRIORITY_TMOVE, 0)) {
+        cerr << "Error task create: " << strerror(-err) << endl << flush;
+        exit(EXIT_FAILURE);
+    }
+    if (err = rt_task_create(&th_restartServ, "th_restartServ", 0, PRIORITY_TMOVE, 0)) {
         cerr << "Error task create: " << strerror(-err) << endl << flush;
         exit(EXIT_FAILURE);
     }
@@ -219,6 +232,10 @@ void Tasks::Run() {
         cerr << "Error task start: " << strerror(-err) << endl << flush;
         exit(EXIT_FAILURE);
     }
+    if (err = rt_task_start(&th_restartServ, (void(*)(void*)) & Tasks::RestartServ, this)) {
+        cerr << "Error task start: " << strerror(-err) << endl << flush;
+        exit(EXIT_FAILURE);
+    }
     cout << "Tasks launched" << endl << flush;
 }
 
@@ -251,16 +268,19 @@ void Tasks::ServerTask(void *arg) {
     /**************************************************************************************/
     /* The task server starts here                                                        */
     /**************************************************************************************/
-    rt_mutex_acquire(&mutex_monitor, TM_INFINITE);
-    status = monitor.Open(SERVER_PORT);
-    rt_mutex_release(&mutex_monitor);
-    cout << "Open server on port " << (SERVER_PORT) << " (" << status << ")" << endl;
-    if (status < 0) throw std::runtime_error {
+    while(1){
+        rt_mutex_acquire(&mutex_monitor, TM_INFINITE);
+        status = monitor.Open(SERVER_PORT);
+        rt_mutex_release(&mutex_monitor);
+        cout << "Open server on port " << (SERVER_PORT) << " (" << status << ")" << endl;
+        if (status < 0) throw std::runtime_error {
             "Unable to start server on port " + std::to_string(SERVER_PORT)
         };
-    monitor.AcceptClient(); // Wait the monitor client
-    cout << "Rock'n'Roll baby, client accepted!" << endl << flush;
-    rt_sem_broadcast(&sem_serverOk);
+        monitor.AcceptClient(); // Wait the monitor client
+        cout << "Rock'n'Roll baby, client accepted!" << endl << flush;
+        rt_sem_broadcast(&sem_serverOk);
+        rt_sem_p(&sem_startServ, TM_INFINITE);
+    }
 }
 
 /**
@@ -303,16 +323,15 @@ void Tasks::ReceiveFromMonTask(void *arg) {
     /**************************************************************************************/
     rt_sem_p(&sem_serverOk, TM_INFINITE);
     cout << "Received message from monitor activated" << endl << flush;
-    //int cpt = 0;
     while (1) {
         msgRcv = monitor.Read();
         cout << "Rcv <= " << msgRcv->ToString() << endl << flush;
-        if (msgRcv->CompareID(MESSAGE_MONITOR_LOST)) /*&& (cpt == 0))*/ {
+        if (msgRcv->CompareID(MESSAGE_MONITOR_LOST)) {
             cout << "Monitor lost" << endl << flush;
-            //cpt++;
+            rt_sem_v(&sem_restartServ);
+            rt_sem_p(&sem_serverOk, TM_INFINITE);
         } else if (msgRcv->CompareID(MESSAGE_ROBOT_COM_OPEN)) {
             rt_sem_v(&sem_openComRobot);
-            //cpt = 0;
         } else if (msgRcv->CompareID(MESSAGE_ROBOT_START_WITHOUT_WD)|| (msgRcv->CompareID(MESSAGE_ROBOT_START_WITH_WD))) {
             rt_mutex_acquire(&mutex_errorCom, TM_INFINITE);
             err = error_ComRobot;
@@ -621,10 +640,31 @@ void Tasks::closeRestartComRobot (void * arg) {
             rt_mutex_release(&mutex_errorCom);
         }
         else{
-            cout << "+++++++++++++++PROBLEM IN CLOSING COM ROBOT ++++++++++++++";
+            cout << "+++++++++++++++PROBLEM IN CLOSING COM ROBOT ++++++++++++++++";
             WriteInQueue(&q_messageToMon, new Message(MESSAGE_ANSWER_NACK));
         }
     }
     
+}
+void Tasks::RestartServ(void *arg) {
+    cout << "Start " << __PRETTY_FUNCTION__ << endl << flush;
+    // Synchronization barrier (waiting that all tasks are starting)
+    rt_sem_p(&sem_barrier, TM_INFINITE);
+    
+    /**************************************************************************************/
+    /* The task starts here                                                               */
+    /**************************************************************************************/
+    while (1) {
+        rt_sem_p(&sem_restartServ, TM_INFINITE);
+        
+        rt_sem_v(&sem_closeComRobot);
+        
+        rt_mutex_acquire(&mutex_monitor, TM_INFINITE);
+        monitor.Close();
+        rt_mutex_release(&mutex_monitor);
+        
+
+        rt_sem_v(&sem_startServ);
+    }
 }
 
