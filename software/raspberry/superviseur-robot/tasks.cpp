@@ -73,6 +73,10 @@ void Tasks::Init() {
         cerr << "Error mutex create: " << strerror(-err) << endl << flush;
         exit(EXIT_FAILURE);
     }
+    if (err = rt_mutex_create(&mutex_WD, NULL)) {
+        cerr << "Error mutex create: " << strerror(-err) << endl << flush;
+        exit(EXIT_FAILURE);
+    }
     cout << "Mutexes created successfully" << endl << flush;
 
     /**************************************************************************************/
@@ -309,18 +313,17 @@ void Tasks::ReceiveFromMonTask(void *arg) {
         } else if (msgRcv->CompareID(MESSAGE_ROBOT_COM_OPEN)) {
             rt_sem_v(&sem_openComRobot);
             //cpt = 0;
-        } else if (msgRcv->CompareID(MESSAGE_ROBOT_COM_OPEN)) {
-            rt_sem_v(&sem_closeComRobot);
         } else if (msgRcv->CompareID(MESSAGE_ROBOT_START_WITHOUT_WD)|| (msgRcv->CompareID(MESSAGE_ROBOT_START_WITH_WD))) {
-            WD_ID = msgRcv->GetID();
-            rt_sem_v(&sem_startRobot);
-            
             rt_mutex_acquire(&mutex_errorCom, TM_INFINITE);
             err = error_ComRobot;
             rt_mutex_release(&mutex_errorCom);
             if(err == 1){
                 rt_sem_v(&sem_openComRobot);
             }
+            rt_mutex_acquire(&mutex_WD, TM_INFINITE);
+            WD_ID = msgRcv->GetID();
+            rt_mutex_release(&mutex_WD);
+            rt_sem_v(&sem_startRobot);
         }else if (msgRcv->CompareID(MESSAGE_ROBOT_GO_FORWARD) ||
                 msgRcv->CompareID(MESSAGE_ROBOT_GO_BACKWARD) ||
                 msgRcv->CompareID(MESSAGE_ROBOT_GO_LEFT) ||
@@ -349,6 +352,7 @@ void Tasks::OpenComRobot(void *arg) {
     /**************************************************************************************/
     /* The task openComRobot starts here                                                  */
     /**************************************************************************************/
+    Message * msgSend;
     while (1) {
         rt_sem_p(&sem_openComRobot, TM_INFINITE);
         cout << "Open serial com (";
@@ -357,8 +361,10 @@ void Tasks::OpenComRobot(void *arg) {
         rt_mutex_release(&mutex_robot);
         cout << status;
         cout << ")" << endl << flush;
+        rt_mutex_acquire(&mutex_errorCom, TM_INFINITE);
+        error_ComRobot = 0;
+        rt_mutex_release(&mutex_errorCom);
 
-        Message * msgSend;
         if (status < 0) {
             msgSend = new Message(MESSAGE_ANSWER_NACK);
         } else {
@@ -373,23 +379,26 @@ void Tasks::OpenComRobot(void *arg) {
  */
 void Tasks::StartRobotTask(void *arg) {
     cout << "Start " << __PRETTY_FUNCTION__ << endl << flush;
+    int wd;
     // Synchronization barrier (waiting that all tasks are starting)
     rt_sem_p(&sem_barrier, TM_INFINITE);
-    
     /**************************************************************************************/
     /* The task startRobot starts here                                                    */
     /**************************************************************************************/
+    Message * msgSend;
     while (1) {
-
-        Message * msgSend;
         rt_sem_p(&sem_startRobot, TM_INFINITE);
-        cout << "Start robot without watchdog (";
-        if(WD_ID == MESSAGE_ROBOT_START_WITH_WD){//with watchdog){
+        rt_mutex_acquire(&mutex_WD, TM_INFINITE);
+        wd = WD_ID;
+        rt_mutex_release(&mutex_WD);
+        if(wd == MESSAGE_ROBOT_START_WITH_WD){//with watchdog){
+            cout << "Start robot with watchdog" << endl << flush;
             rt_mutex_acquire(&mutex_robot, TM_INFINITE);
             msgSend = robot.Write(robot.StartWithWD());
             rt_mutex_release(&mutex_robot);
         }
-        else{
+        else if (wd == MESSAGE_ROBOT_START_WITHOUT_WD){
+            cout << "Start robot without watchdog " << endl << flush;
             rt_mutex_acquire(&mutex_robot, TM_INFINITE);
             msgSend = robot.Write(robot.StartWithoutWD());
             rt_mutex_release(&mutex_robot);
@@ -532,11 +541,12 @@ void Tasks::Compteur(void *arg) {
         //Mettre un ping        
         
         if(rs == 1){
-            if (compteur >= 1) {
+            if (compteur >= 3) {
                 cout << "+++++++++++++++++COMMUNICATION WITH ROBOT LOST++++++++++++++" << endl << flush;
                 rt_sem_v(&sem_closeComRobot);
                 msgSend = new Message(MESSAGE_ANSWER_COM_ERROR);
                 WriteInQueue(&q_messageToMon, msgSend);
+                compteur = 0;
             }
             else{
                 rt_mutex_acquire(&mutex_robot, TM_INFINITE);
@@ -561,7 +571,7 @@ void Tasks::Compteur(void *arg) {
 void Tasks::Batterie (void * arg){
     cout << "Start " << __PRETTY_FUNCTION__ << endl << flush;
     rt_sem_p(&sem_barrier, TM_INFINITE);
-    rt_task_set_periodic(NULL, TM_NOW, 100000000);
+    rt_task_set_periodic(NULL, TM_NOW, 50000000);
     Message * msgSend;
     int rs;
     while(1){

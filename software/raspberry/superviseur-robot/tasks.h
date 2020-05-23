@@ -91,6 +91,7 @@ private:
     RT_MUTEX mutex_robotStarted;
     RT_MUTEX mutex_move;
     RT_MUTEX mutex_errorCom;
+    RT_MUTEX mutex_WD;
 
     /**********************************************************************/
     /* Semaphores                                                         */
