@@ -80,6 +80,7 @@ private:
     RT_TASK th_battery;
     RT_TASK th_watchdog;
     RT_TASK th_compteur;
+    RT_TASK th_closerestartRobot;
     
     /**********************************************************************/
     /* Mutex                                                              */
@@ -99,6 +100,7 @@ private:
     RT_SEM sem_startRobotWatchdog;
     RT_SEM sem_compteur;
     RT_SEM sem_batterie;
+    RT_SEM sem_closeComRobot;
 
     /**********************************************************************/
     /* Message queues                                                     */
@@ -152,6 +154,8 @@ private:
     void Watchdog(void *arg);
     
     void Compteur(void *arg);
+    
+    void closeRestartComRobot (void * arg);
     
     void Batterie(void *arg);
     /**

@@ -106,6 +106,10 @@ void Tasks::Init() {
         cerr << "Error semaphore create: " << strerror(-err) << endl << flush;
         exit(EXIT_FAILURE);
     }
+    if (err = rt_sem_create(&sem_closeComRobot, NULL, 0, S_FIFO)) {
+        cerr << "Error semaphore create: " << strerror(-err) << endl << flush;
+        exit(EXIT_FAILURE);
+    }
     cout << "Semaphores created successfully" << endl << flush;
 
     /**************************************************************************************/
@@ -144,6 +148,10 @@ void Tasks::Init() {
         exit(EXIT_FAILURE);
     }
     if (err = rt_task_create(&th_compteur, "th_compteur", 0, PRIORITY_TMOVE, 0)) {
+        cerr << "Error task create: " << strerror(-err) << endl << flush;
+        exit(EXIT_FAILURE);
+    }
+    if (err = rt_task_create(&th_closerestartRobot, "th_closerestartRobot", 0, PRIORITY_TMOVE, 0)) {
         cerr << "Error task create: " << strerror(-err) << endl << flush;
         exit(EXIT_FAILURE);
     }
@@ -200,6 +208,10 @@ void Tasks::Run() {
         exit(EXIT_FAILURE);
     }
     if (err = rt_task_start(&th_compteur, (void(*)(void*)) & Tasks::Compteur, this)) {
+        cerr << "Error task start: " << strerror(-err) << endl << flush;
+        exit(EXIT_FAILURE);
+    }
+    if (err = rt_task_start(&th_closerestartRobot, (void(*)(void*)) & Tasks::closeRestartComRobot, this)) {
         cerr << "Error task start: " << strerror(-err) << endl << flush;
         exit(EXIT_FAILURE);
     }
@@ -298,6 +310,8 @@ void Tasks::ReceiveFromMonTask(void *arg) {
         } else if (msgRcv->CompareID(MESSAGE_ROBOT_COM_OPEN)) {
             rt_sem_v(&sem_openComRobot);
             //cpt = 0;
+        } else if (msgRcv->CompareID(MESSAGE_ROBOT_COM_OPEN)) {
+            rt_sem_v(&sem_closeComRobot);
         } else if (msgRcv->CompareID(MESSAGE_ROBOT_START_WITHOUT_WD)|| (msgRcv->CompareID(MESSAGE_ROBOT_START_WITH_WD))) {
             WD_ID = msgRcv->GetID();
             rt_sem_v(&sem_startRobot);
@@ -515,8 +529,9 @@ void Tasks::Compteur(void *arg) {
         //Mettre un ping        
         cout << "PING SENT" <<endl << flush;
         if(rs == 1){
-            if (compteur >= 3) {
+            if (compteur >= 1) {
                 cout << "+++++++++++++++++COMPTEUR A 3 ++++++++++++++" << endl << flush;
+                rt_sem_v(&sem_closeComRobot);
                 msgSend = new Message(MESSAGE_ANSWER_COM_ERROR);
                 WriteInQueue(&q_messageToMon, msgSend);
             }
@@ -563,5 +578,36 @@ void Tasks::Batterie (void * arg){
             }
         }
     }
+}
+
+void Tasks::closeRestartComRobot (void * arg) {
+    cout << "Start " << __PRETTY_FUNCTION__ << endl << flush;
+    int err;
+    rt_sem_p(&sem_barrier, TM_INFINITE);
+    
+    while(1){
+        rt_sem_p(&sem_closeComRobot, TM_INFINITE);
+        
+        rt_mutex_acquire(&mutex_move, TM_INFINITE);
+        move=MESSAGE_ROBOT_STOP;
+        rt_mutex_release(&mutex_move);
+    
+        rt_mutex_acquire(&mutex_robotStarted, TM_INFINITE);
+        robotStarted = 0;
+        rt_mutex_release(&mutex_robotStarted);
+    
+        rt_mutex_acquire(&mutex_robot, TM_INFINITE);
+        err = robot.Close();
+        rt_mutex_release(&mutex_robot);
+    
+        if(err >= 0){
+            WriteInQueue(&q_messageToMon, new Message(MESSAGE_ANSWER_ACK));
+        }
+        else{
+            cout << "+++++++++++++++PROBLEM IN CLOSING COM ROBOT ++++++++++++++";
+            WriteInQueue(&q_messageToMon, new Message(MESSAGE_ANSWER_ACK));
+        }
+    }
+    
 }
 
